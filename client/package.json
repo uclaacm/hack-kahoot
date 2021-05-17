@@ -19,6 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "pretty": "prettier --check 'src/**/(*.js|.jsx)'",
+    "prettier": "yarn pretty --write",
     "lint": "eslint --ext js,jsx",
     "format": "eslint --ext js,jsx --fix "
   },
@@ -48,6 +50,8 @@
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-config-prettier": "8.3.0",
+    "prettier": "^2.3.0"
   }
 }
