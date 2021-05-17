@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "prettier --check ./**/*.js",
-    "lint:fix": "yarn lint --write"
+    "pretty": "prettier --check ./**/*.js",
+    "prettier": "yarn pretty --write"
   },
   "repository": {
     "type": "git",
