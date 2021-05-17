@@ -4,12 +4,17 @@
   "description": "Hack Kahoot Server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check ./**/*.js",
+    "lint:fix": "yarn lint --write"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/uclaacm/hack-kahoot/issues"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  }
 }
