@@ -1,0 +1,11 @@
+{
+  "name": "hack-kahoot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/uclaacm/hack-kahoot.git",
+  "author": "Eugene Lo <bleugene12@g.ucla.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.27.0"
+  }
+}
