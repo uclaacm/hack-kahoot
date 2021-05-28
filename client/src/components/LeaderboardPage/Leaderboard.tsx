@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-between",
     alignItems: "center",
     height: "10vh",
+    padding: "5px",
     width: "70vw",
   },
   list: {
@@ -49,16 +50,14 @@ const useStyles = makeStyles(theme => ({
   footerContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-    width: "100vw",
+    justifyContent: "space-between",
   },
   leftFootContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-    width: "25vw",
+    justifyContent: "space-between",
   },
   nextButton: {
     alignSelf: "center",
@@ -79,7 +78,7 @@ const scores = [
   { name: "charlie", score: 160 },
 ];
 
-function Leaderboard() {
+function Leaderboard(): JSX.Element {
   const classes = useStyles();
   return (
     <div className={classes.boardContainer}>
@@ -104,16 +103,16 @@ function Leaderboard() {
                 <div className={classes.scoreContainer}>
                   <Typography
                     align="center"
-                    component="h1"
-                    variant="h3"
+                    component="h4"
+                    variant="h4"
                     className={classes.title}
                   >
                     {score.name}
                   </Typography>
                   <Typography
                     align="center"
-                    component="h1"
-                    variant="h3"
+                    component="h4"
+                    variant="h4"
                     className={classes.title}
                   >
                     {score.score}
@@ -124,8 +123,8 @@ function Leaderboard() {
           );
         })}
       </List>
-      <div className={classes.footerContainer}>
-        <div className={classes.leftFootContainer}>
+      <Container className={classes.footerContainer} maxWidth="xl">
+        <Container className={classes.leftFootContainer} maxWidth="xs">
           <Typography
             align="center"
             component="h4"
@@ -142,9 +141,9 @@ function Leaderboard() {
           >
             Quiz PIN: 4443332
           </Typography>
-        </div>
-        <Button role="link">End quiz</Button>
-      </div>
+        </Container>
+        <Button> End Quiz </Button>
+      </Container>
     </div>
   );
 }
