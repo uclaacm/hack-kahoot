@@ -51,9 +51,11 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
   },
   leftFootContainer: {
+    position: "absolute",
+    left: 0,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
