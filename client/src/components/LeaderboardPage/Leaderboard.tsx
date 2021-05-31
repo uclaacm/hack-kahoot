@@ -1,0 +1,153 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
+import List from "@material-ui/core/List";
+
+const useStyles = makeStyles(theme => ({
+  title: {
+    fontFamily: theme.typography.fontFamily,
+    fontWeight: "bold",
+    color: "white",
+  },
+  footer: {
+    fontFamily: theme.typography.fontFamily,
+    fontWeight: "bold",
+    color: "black",
+  },
+  boardContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    alignItems: "center",
+    backgroundColor: "#942EFF",
+    height: "100vh",
+  },
+  scoreContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: "10vh",
+    padding: "5px",
+    width: "70vw",
+  },
+  list: {
+    display: "flex",
+    justifyContent: "flex-start",
+    flexDirection: "column",
+    alignItems: "center",
+    height: "70vh",
+  },
+  titleContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "10px",
+  },
+  footerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  leftFootContainer: {
+    position: "absolute",
+    left: 0,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  nextButton: {
+    alignSelf: "center",
+    position: "absolute",
+    top: 20,
+    right: 20,
+    height: "40px",
+    width: "100px",
+    backgroundColor: "white",
+  },
+}));
+
+const scores = [
+  { name: "charlie", score: 1020 },
+  { name: "cookiesarecool", score: 120 },
+  { name: "david", score: 160 },
+  { name: "cookie", score: 1620 },
+  { name: "charlie", score: 160 },
+];
+
+function Leaderboard(): JSX.Element {
+  const classes = useStyles();
+  return (
+    <div className={classes.boardContainer}>
+      <Container className={classes.titleContainer}>
+        <Typography
+          align="center"
+          component="h1"
+          variant="h3"
+          className={classes.title}
+        >
+          Scoreboard
+        </Typography>
+        <Button role="link" className={classes.nextButton} variant="contained">
+          next
+        </Button>
+      </Container>
+      <List className={classes.list}>
+        {scores.map(score => {
+          return (
+            <React.Fragment key={score.name}>
+              <li>
+                <div className={classes.scoreContainer}>
+                  <Typography
+                    align="center"
+                    component="h4"
+                    variant="h4"
+                    className={classes.title}
+                  >
+                    {score.name}
+                  </Typography>
+                  <Typography
+                    align="center"
+                    component="h4"
+                    variant="h4"
+                    className={classes.title}
+                  >
+                    {score.score}
+                  </Typography>
+                </div>
+              </li>
+            </React.Fragment>
+          );
+        })}
+      </List>
+      <Container className={classes.footerContainer} maxWidth="xl">
+        <Container className={classes.leftFootContainer} maxWidth="xs">
+          <Typography
+            align="center"
+            component="h4"
+            variant="h4"
+            className={classes.title}
+          >
+            hackoot.it
+          </Typography>
+          <Typography
+            align="center"
+            component="h5"
+            variant="h5"
+            className={classes.footer}
+          >
+            Quiz PIN: 4443332
+          </Typography>
+        </Container>
+        <Button> End Quiz </Button>
+      </Container>
+    </div>
+  );
+}
+
+export default Leaderboard;
