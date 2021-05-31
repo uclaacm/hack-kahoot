@@ -80,7 +80,7 @@ const scores = [
   { name: "charlie", score: 160 },
 ];
 
-function Leaderboard(): JSX.Element {
+function Leaderboard() {
   const classes = useStyles();
   return (
     <div className={classes.boardContainer}>
@@ -98,8 +98,8 @@ function Leaderboard(): JSX.Element {
         </Button>
       </Container>
       <List className={classes.list}>
-        {scores.map(score => {
-          return (
+        {scores.map(score => 
+           (
             <React.Fragment key={score.name}>
               <li>
                 <div className={classes.scoreContainer}>
@@ -122,8 +122,8 @@ function Leaderboard(): JSX.Element {
                 </div>
               </li>
             </React.Fragment>
-          );
-        })}
+          )
+        )}
       </List>
       <Container className={classes.footerContainer} maxWidth="xl">
         <Container className={classes.leftFootContainer} maxWidth="xs">

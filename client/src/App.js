@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Leaderboard from "./components/LeaderboardPage/Leaderboard";
-import Login from "./components/LeaderboardPage/Leaderboard";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -9,9 +9,6 @@ function App() {
       <Switch>
           <Route path="/login">
             <Login />
-          </Route>
-          <Route path="/">
-            <div>Game PIN Screen</div>
           </Route>
         <Route path="/leaderboard">
           <Leaderboard />
